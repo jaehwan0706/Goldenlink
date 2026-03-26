@@ -1,0 +1,202 @@
+/* --- SituationFirstAid 정밀 디자인 --- */
+
+.gl-situation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+}
+
+.gl-situation-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.gl-situation-header h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.gl-situation-header p {
+  font-size: 18px;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+/* 카드 공통 스타일 */
+.gl-aid-card {
+  background: #fff;
+  border: 1px solid rgba(244, 185, 196, 0.4);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  margin-bottom: 50px;
+}
+
+.gl-aid-card-head {
+  padding: 25px 35px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+}
+
+.gl-aid-icon {
+  font-size: 28px;
+}
+
+.gl-aid-card-head h2 {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.gl-aid-card-body {
+  padding: 40px;
+}
+
+.gl-aid-desc {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* 레이아웃: 단계 + 사이드바 */
+.gl-aid-grid-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+}
+
+.gl-aid-step {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  background: #fdfdfd;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 5px solid #eee;
+}
+
+.gl-step-num {
+  background: #e11d48;
+  color: #fff;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.gl-aid-step strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.gl-aid-step p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* 사이드 박스들 */
+.gl-info-box {
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.gl-info-box h4 {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 18px; font-weight: 900; margin-bottom: 15px;
+}
+
+.gl-info-box ul { padding-left: 20px; }
+.gl-info-box li { font-size: 14.5px; margin-bottom: 10px; color: #4b5563; font-weight: 700; line-height: 1.5; }
+
+/* 상황별 컬러 테마 */
+.is-cpr .gl-aid-card-head { background-color: #e11d48; }
+.is-cpr .gl-aid-step { border-left-color: #e11d48; }
+
+.is-bleeding .gl-aid-card-head { background-color: #c00000; }
+.is-burn .gl-aid-card-head { background-color: #d32f2f; }
+.is-cold .gl-aid-card-head { background-color: #1e88e5; }
+.is-choking .gl-aid-card-head { background-color: #8e24aa; }
+.is-fracture .gl-aid-card-head { background-color: #546e7a; }
+
+/* 박스 컬러 변형 */
+.is-yellow { background-color: #fffbeb; border: 1px solid #fef3c7; color: #92400e; }
+.is-red { background-color: #fef2f2; border: 1px solid #fee2e2; color: #991b1b; }
+.is-red-light { background-color: #fff1f2; color: #991b1b; }
+.is-purple-light { background-color: #faf5ff; }
+.gl-purple-text { color: #6b21a8; }
+
+/* 요약 배너 */
+.gl-summary-box {
+  border-radius: 20px;
+  padding: 35px 20px;
+  text-align: center;
+  color: #fff;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+
+.gl-summary-box.is-pink { background-color: #e11d48; }
+.gl-summary-box strong { font-size: 22px; font-weight: 900; }
+
+/* 3분할 레이아웃 */
+.gl-flex-row-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.gl-box-item {
+  background: #fff;
+  border: 1px solid #f3f4f6;
+  border-radius: 20px;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.gl-box-num {
+  background: #e11d48;
+  color: #fff;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 900; margin-bottom: 15px;
+}
+
+.gl-box-icon { font-size: 40px; color: #1e88e5; margin-bottom: 15px; }
+.gl-box-item h3 { font-size: 19px; font-weight: 900; margin-bottom: 15px; }
+.gl-box-item p { font-size: 14.5px; color: #6b7280; line-height: 1.6; font-weight: 700; }
+
+/* 하단 주의 띠 */
+.gl-caution-strip {
+  background: #fff1f2;
+  border-radius: 12px;
+  padding: 18px 25px;
+  display: flex; align-items: center; gap: 12px;
+  font-weight: 800; color: #991b1b; font-size: 14px;
+}
+
+.gl-caution-strip.is-blue { background: #eff6ff; color: #1e40af; }
+
+/* 하단 푸터 배너 */
+.gl-situation-footer {
+  background: #e11d48;
+  border-radius: 30px;
+  padding: 60px 40px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(225, 29, 72, 0.2);
+}
+
+.gl-situation-footer h2 { font-size: 32px; font-weight: 900; margin-bottom: 20px; }
+.gl-situation-footer p { font-size: 18px; line-height: 1.7; font-weight: 700; opacity: 0.95; }

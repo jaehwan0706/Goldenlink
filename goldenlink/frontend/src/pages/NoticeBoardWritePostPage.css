@@ -1,0 +1,31 @@
+/* --- NoticeBoardWritePostPage 스타일 --- */
+.gl-notice-write-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.gl-notice-write-header h1 { font-size: 24px; font-weight: 900; margin-bottom: 25px; }
+
+.gl-notice-write-card {
+  background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.gl-write-field { margin-bottom: 25px; }
+.gl-write-field label { display: block; font-weight: 800; font-size: 14px; margin-bottom: 10px; color: #333; }
+
+.gl-notice-write-card input[type="text"], .gl-notice-write-card textarea {
+  width: 100%; padding: 15px; border: 1px solid #f1f1f1; border-radius: 10px;
+  font-size: 15px; font-weight: 600; background: #fcfcfc; outline: none;
+}
+.gl-read-only-input { color: #999; background: #f8f8f8 !important; }
+.gl-notice-write-card textarea { height: 300px; resize: none; border: 1.5px solid rgba(225, 29, 72, 0.1); }
+
+.gl-file-upload-zone {
+  border: 1.5px dashed #eee; border-radius: 12px; padding: 30px; text-align: center; cursor: pointer;
+}
+.gl-upload-icon { font-size: 35px; color: #cbd5e1; margin-bottom: 8px; }
+
+.gl-pin-option { margin: 20px 0; display: flex; align-items: center; }
+.gl-checkbox-label { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 14px; cursor: pointer; }
+.gl-pin-icon { color: #666; font-size: 18px; }
+
+.gl-write-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 30px; }
+.gl-btn-cancel { background: #f1f5f9; color: #64748b; padding: 12px 25px; border-radius: 10px; border: none; font-weight: 800; cursor: pointer; }
+.gl-btn-submit { background: #e11d48; color: #fff; padding: 12px 30px; border-radius: 10px; border: none; font-weight: 900; cursor: pointer; }

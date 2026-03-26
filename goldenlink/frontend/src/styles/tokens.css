@@ -1,0 +1,20 @@
+:root{
+  --bg: #fdecef;
+  --bg2: #fff7f9;
+  --card: rgba(255,255,255,.85);
+  --border: #f4b9c4;
+  --border2: #ffd0d6;
+  --text: #111827;
+  --muted: #6b7280;
+
+  --primary: #e11d48;
+  --primary2: #fb7185;
+  --primarySoft: rgba(225,29,72,.12);
+
+  --shadow: 0 12px 30px rgba(0,0,0,.06);
+  --shadow2: 0 10px 26px rgba(225,29,72,.10);
+  --radius: 18px;
+  --radius2: 14px;
+
+  --max: 1320px;
+}

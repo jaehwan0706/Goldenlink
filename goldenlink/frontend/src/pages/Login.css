@@ -1,0 +1,255 @@
+:root {
+  --lg-bg: #fdecef;
+  --lg-primary: #e11d48; /* 골든 링크 포인트 레드 */
+  --lg-border: #f4b9c4;
+  --lg-text: #1f2937;
+  --lg-muted: #6b7280;
+  --lg-white: #ffffff;
+  --lg-success: #059669; /* 성공 메시지용 초록색 추가 */
+}
+
+.lg-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--lg-bg);
+  padding: 20px;
+}
+
+.lg-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--lg-white);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.lg-card-wide {
+  max-width: 480px; /* 회원가입은 조금 더 넓게 */
+}
+
+/* 헤더 */
+.lg-card-head {
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.lg-card-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--lg-text);
+}
+
+.lg-close-btn {
+  background: none; border: none; font-size: 24px; cursor: pointer; color: var(--lg-muted);
+}
+
+/* 바디 */
+.lg-body {
+  padding: 24px;
+}
+
+.lg-scrollable {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* 스크롤바 커스텀 */
+.lg-scrollable::-webkit-scrollbar { width: 6px; }
+.lg-scrollable::-webkit-scrollbar-thumb { background: var(--lg-border); border-radius: 10px; }
+
+.lg-guide-text {
+  font-size: 14px;
+  color: var(--lg-muted);
+  line-height: 1.5;
+}
+
+.lg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lg-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lg-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--lg-text);
+}
+
+.lg-req { color: var(--lg-primary); }
+
+.lg-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.lg-input:focus { border-color: var(--lg-primary); }
+
+/* 입력 에러 상태 */
+.lg-input-error {
+  border-color: var(--lg-primary) !important;
+  background-color: #fff1f2;
+}
+
+/* 인라인 메시지 스타일 */
+.lg-error-msg, .lg-success-msg {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.lg-error-msg { color: var(--lg-primary); }
+.lg-success-msg { color: var(--lg-success); }
+
+/* 찾기 결과 박스 (이미지 3, 4번 결과용) */
+.lg-result-box {
+  margin-top: 20px;
+  padding: 18px;
+  background-color: #f9fafb;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--lg-text);
+  line-height: 1.6;
+}
+
+.lg-result-box.lg-error {
+  color: var(--lg-primary);
+  background-color: #fff1f2;
+  border-color: var(--lg-border);
+}
+
+.lg-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.lg-input-pw-wrap {
+  position: relative;
+}
+
+.lg-pw-eye {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--lg-muted);
+  cursor: pointer;
+}
+
+/* 버튼 */
+.lg-btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: var(--lg-primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lg-btn-primary:hover { background: #be123c; }
+
+.lg-btn-ghost {
+  width: 100%;
+  padding: 14px;
+  background: #f9fafb;
+  color: var(--lg-text);
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lg-btn-outline-sm {
+  padding: 0 15px;
+  background: white;
+  color: var(--lg-primary);
+  border: 1px solid var(--lg-primary);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* 푸터 링크 */
+.lg-footer-links {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--lg-muted);
+  font-weight: 600;
+}
+
+.lg-footer-links span { cursor: pointer; }
+.lg-footer-links span:hover { color: var(--lg-primary); }
+.lg-sep { color: #e5e7eb; cursor: default !important; }
+
+/* 유틸리티 */
+.lg-mt-20 { margin-top: 20px; }
+.lg-mt-30 { margin-top: 30px; }
+
+/* ========================================
+   버튼 그룹 스타일 (아이디찾기, 비밀번호찾기용)
+   Login.css에 추가
+   ======================================== */
+
+/* 버튼 그룹 (2개 버튼을 나란히) */
+.lg-btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.lg-btn-group button {
+  flex: 1; /* 버튼이 동일한 너비로 배치 */
+}
+
+/* 보조 버튼 (로그인으로 버튼) */
+.lg-btn-secondary {
+  padding: 16px 24px;
+  background: white;
+  color: #e11d48;
+  border: 2px solid #e11d48;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lg-btn-secondary:hover {
+  background: #fff5f7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2);
+}
+
+.lg-btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* 기존 lg-mt-20 클래스를 사용하는 버튼은 제거 (lg-btn-group에서 처리) */

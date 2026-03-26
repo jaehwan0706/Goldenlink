@@ -1,0 +1,283 @@
+/* ✅ 정보공유 게시판 전용 스타일 */
+
+/* 컨테이너 - 1100px 고정폭, 중앙 정렬 */
+.gl-info-board-page {
+  max-width: 1100px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+/* ✅ 제목 영역 - 중앙 정렬 */
+.gl-board-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gl-board-header h2 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.gl-board-header p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+}
+
+/* ✅ 검색창 및 버튼 영역 */
+.gl-board-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ✅ SearchBar 형식 검색바 */
+.gl-board-search-bar {
+  flex: 1;
+  background: #ffffff;
+  border: 2px solid #FFD1DC;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  height: 54px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 셀렉트 박스 */
+.gl-search-select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  padding: 0 10px 0 5px;
+  height: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2724%27%20height%3D%2724%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23333333%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpolyline%20points%3D%276%209%2012%2015%2018%209%27%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 16px;
+  padding-right: 24px;
+}
+
+/* 구분선 */
+.gl-search-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #FFD1DC;
+  margin: 0 15px;
+}
+
+/* 입력 영역 */
+.gl-search-input-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+.gl-search-icon {
+  font-size: 16px;
+  color: #777;
+  margin-right: 8px;
+}
+
+.gl-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+  height: 100%;
+}
+
+.gl-search-input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+/* 글쓰기 버튼 */
+.gl-board-write-btn {
+  background: #e11d48;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0 28px;
+  height: 54px;
+  font-weight: 900;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  box-shadow: 0 4px 10px rgba(225, 29, 72, 0.15);
+}
+
+.gl-board-write-btn:hover {
+  background: #be123c;
+  box-shadow: 0 6px 15px rgba(225, 29, 72, 0.25);
+}
+
+/* ✅ 테이블 카드 */
+.gl-board-table-card {
+  background: #fff;
+  border: 1.5px solid rgba(244, 185, 196, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
+}
+
+/* 테이블 스타일 */
+.gl-board-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gl-board-table thead {
+  background: #fff9fa;
+  border-bottom: 1.5px solid rgba(244, 185, 196, 0.3);
+}
+
+.gl-board-table th {
+  padding: 18px 15px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 14px;
+  color: #333;
+}
+
+.gl-board-table tbody tr {
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.15s;
+}
+
+.gl-board-table tbody tr:hover {
+  background: #fff9fa;
+}
+
+.gl-board-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.gl-board-table td {
+  padding: 16px 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* 번호 열 */
+.gl-td-no {
+  color: #9ca3af;
+  font-weight: 700;
+}
+
+/* 제목 열 */
+.gl-td-title {
+  text-align: left !important;
+  padding-left: 20px !important;
+  cursor: pointer;
+}
+
+.gl-title-text {
+  color: #111;
+  font-weight: 700;
+}
+
+.gl-td-title:hover .gl-title-text {
+  color: #e11d48;
+}
+
+/* ✅ 댓글 개수 */
+.gl-comment-count-text {
+  color: #e11d48;
+  font-weight: 800;
+  font-size: 13px;
+  margin-left: 4px;
+}
+
+/* 작성자, 조회, 추천, 날짜 */
+.gl-td-author,
+.gl-td-views,
+.gl-td-likes,
+.gl-td-date {
+  color: #6b7280;
+}
+
+/* ✅ Footer */
+.gl-board-footer {
+  text-align: center;
+  padding: 20px;
+  color: #9ca3af;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ========================================
+   페이지네이션 스타일 (공통)
+   InfoBoardPage.css, NoticePage.css, InquiryBoardPage.css에 추가
+   ======================================== */
+
+/* 페이지네이션 컨테이너 */
+.gl-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 30px 0 20px;
+}
+
+/* 페이지 버튼 */
+.gl-page-btn {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #FFD1DC;
+  background: white;
+  color: #e11d48;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gl-page-btn:hover:not(:disabled) {
+  background: #fff5f7;
+  border-color: #e11d48;
+  transform: translateY(-2px);
+}
+
+.gl-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* 활성 페이지 버튼 */
+.gl-page-btn.active {
+  background: #e11d48;
+  color: white;
+  border-color: #e11d48;
+  font-weight: 700;
+}
+
+/* 게시판 하단 정보 */
+.gl-board-footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 14px;
+}

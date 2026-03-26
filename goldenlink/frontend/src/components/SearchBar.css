@@ -1,0 +1,101 @@
+/* =========================================================
+   SearchBar 전용 스타일
+   - 시안(image_6.png)의 둥근 핑크색 테두리 디자인 반영
+   ========================================================= */
+
+/* 1. 검색바 전체 컨테이너 여백 */
+.gl-searchBarWrap {
+  max-width: 1326px;
+  margin: 20px auto 0;
+  padding: 0 22px 12px;
+  box-sizing: border-box;
+}
+
+/* 2. 융합형 검색바 본체 */
+.gl-searchBar {
+  background: #ffffff; /* 흰색 배경 */
+  border: 2px solid #FFD1DC; /* 이미지의 연한 핑크색 테두리 */
+  border-radius: 50px; /* 완전히 둥근 모서리 */
+  display: flex;
+  align-items: center;
+  padding: 5px 20px; /* 내부 간격 조절 */
+  height: 54px; /* 적절한 높이 설정 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
+  transition: all 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+
+
+/* 3. 왼쪽 셀렉트 박스 */
+.gl-searchSelect {
+  border: none; /* 테두리 제거 */
+  outline: none; /* 포커스 라인 제거 */
+  background: transparent; /* 배경 투명 */
+  font-family: inherit;
+  font-weight: 700; /* 굵은 폰트 */
+  font-size: 15px;
+  color: #333333; /* 짙은 회색 텍스트 */
+  cursor: pointer;
+  padding: 0 10px 0 5px;
+  height: 100%;
+  
+  /* 기본 화살표 제거 및 커스텀 화살표 추가 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2724%27%20height%3D%2724%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23333333%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20class%3D%27feather%20feather-chevron-down%27%3E%3Cpolyline%20points%3D%276%209%2012%2015%2018%209%27%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 16px;
+  padding-right: 24px; /* 화살표 공간 확보 */
+}
+
+/* 4. 중앙 수직 구분선 */
+.gl-searchDivider {
+  width: 1px; /* 얇은 선 */
+  height: 24px; /* 적절한 높이 */
+  background-color: #FFD1DC; /* 테두리와 같은 핑크색 */
+  margin: 0 15px; /* 좌우 간격 */
+}
+
+/* 5. 오른쪽 입력 영역 컨테이너 */
+/* 5. 오른쪽 입력 영역 컨테이너 */
+.gl-searchInputInner {
+  display: flex;
+  align-items: center;
+  flex: 1; /* 남은 공간 모두 차지 */
+  height: 100%;
+}
+
+/* 돋보기 아이콘 스타일 (FaMagnifyingGlass) - 수정됨 */
+.gl-searchIcon {
+  font-size: 16px;
+  color: #777777; /* 회색 아이콘 */
+  /* margin-right: 12px; */ /* 기존 여백 제거 또는 조절 */
+  margin-right: 8px; /* 입력창과 자연스러운 간격을 위해 약간만 유지 */
+  
+  /* 혹시 모를 박스 스타일 초기화 */
+  background: transparent !important; /* 배경색 투명 */
+  border: none !important; /* 테두리 없음 */
+  padding: 0 !important; /* 패딩 없음 */
+  box-shadow: none !important; /* 그림자 없음 */
+}
+
+/* 텍스트 입력창 */
+.gl-searchInput {
+  width: 100%;
+  border: none; /* 테두리 제거 */
+  outline: none; /* 포커스 라인 제거 */
+  background: transparent; /* 배경 투명 */
+  font-family: inherit;
+  font-weight: 500; /* 중간 굵기 폰트 */
+  font-size: 15px;
+  color: #333333; /* 짙은 회색 텍스트 */
+  height: 100%;
+}
+
+/* 플레이스홀더 스타일 */
+.gl-searchInput::placeholder {
+  color: #999999; /* 연한 회색 */
+  font-weight: 400;
+}

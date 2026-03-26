@@ -1,0 +1,1047 @@
+/* =========================================================
+   components.css - 중복 제거 완료
+   ========================================================= */
+
+/* Page */
+.gl-page{
+  min-height: 100vh;
+}
+
+/* =========================
+   Header
+   ========================= */
+.gl-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(244,185,196,.65);
+}
+
+.gl-header-inner{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+}
+
+/* Brand */
+.gl-brand{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  cursor:pointer;
+  user-select:none;
+  min-width: 210px;
+  flex: 0 0 auto;
+}
+
+.gl-logoMark{
+  width: 150px;
+  height: 60px;
+}
+
+.gl-logoImg{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================
+   Nav + Mega Menu
+   ========================= */
+.gl-nav{
+  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.gl-navRow{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 38px;
+  padding: 6px 0;
+}
+
+.gl-navItem{
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  color: #111;
+  padding: 8px 10px;
+  border-radius: 12px;
+  transition: background .15s ease, color .15s ease;
+  white-space: nowrap;
+}
+.gl-navItem:hover{
+  background: rgba(225,29,72,.06);
+}
+.gl-navItem.is-active{
+  color: var(--primary);
+}
+
+.gl-mega{
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 44px;
+  width: min(980px, calc(100vw - 28px));
+  padding-top: 12px;
+}
+
+.gl-megaInner{
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(244,185,196,.8);
+  border-radius: 18px;
+  box-shadow: var(--shadow2);
+  overflow: hidden;
+  display:flex;
+}
+
+.gl-megaCol{
+  flex: 1;
+  padding: 16px 18px;
+  border-right: 1px solid rgba(244,185,196,.45);
+  background: transparent;
+  transition: background .12s ease, color .12s ease;
+}
+.gl-megaCol:last-child{ border-right: 0; }
+
+.gl-megaCol.is-active{
+  background: var(--primary);
+  color: #fff;
+}
+.gl-megaTitle{
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+  margin-bottom: 12px;
+}
+.gl-megaList{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+.gl-megaLink{
+  text-decoration:none;
+  font-weight: 700;
+  font-size: 13px;
+  color: inherit;
+  opacity: .95;
+}
+.gl-megaLink:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* =========================
+   Right Actions (user/login)
+   ========================= */
+.gl-actions{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  min-width: 220px;
+  justify-content: flex-end;
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+.gl-userChip{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(225,29,72,.06);
+  border: 1px solid rgba(244,185,196,.7);
+}
+
+.gl-userDot{
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34,197,94,.12);
+}
+
+.gl-userName{
+  font-weight: 800;
+  font-size: 13px;
+  color: #111;
+}
+
+.gl-bookmarkBtn{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(225,29,72,.35);
+  background: rgba(255,255,255,.92);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,.04);
+}
+.gl-bookmarkBtn svg{
+  font-size: 28px;
+  color: var(--primary);
+}
+.gl-bookmarkBtn:hover{
+  background: rgba(225,29,72,.06);
+  border-color: rgba(225,29,72,.55);
+}
+
+/* =========================
+   Buttons (shared)
+   ========================= */
+.gl-btn{
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-weight: 900;
+  border-radius: 14px;
+  padding: 10px 20px;
+  transition: transform .05s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+  white-space: nowrap;
+}
+.gl-btn:active{ transform: translateY(1px); }
+
+/* ✅ Header 버튼만 자동 너비 */
+.gl-actions .gl-btn {
+  width: auto !important;
+  min-width: 50px;
+  max-width: 60px;
+}
+
+.gl-btnPrimary{
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 14px 26px rgba(225,29,72,.22);
+}
+.gl-btnPrimary:hover{ background: #d4143f; }
+
+.gl-btnOutline{
+  background: rgba(255,255,255,.92);
+  color: var(--primary);
+  border: 1px solid rgba(225,29,72,.55);
+  box-shadow: 0 10px 20px rgba(0,0,0,.05);
+}
+.gl-btnOutline:hover{
+  background: rgba(225,29,72,.06);
+  border-color: rgba(225,29,72,.75);
+}
+
+.gl-btnGhost{
+  background: transparent;
+  color: #111;
+  border: 1px solid rgba(244,185,196,.65);
+}
+.gl-btnGhost:hover{
+  background: rgba(255,255,255,.7);
+}
+
+.gl-btnSmall{
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+.gl-btnIco{ margin-right: 8px; }
+.gl-arrow{ margin-left: 8px; font-size: 18px; }
+
+.gl-btnGhost.is-saved{
+  border-color: rgba(225,29,72,.45);
+  color: var(--primary);
+  background: rgba(225,29,72,.06);
+}
+
+/* =========================
+   Search Bar
+   ========================= */
+.gl-searchBarWrap{
+  max-width: var(--max);
+  margin: 16px auto 0;
+  padding: 0 22px 12px;
+}
+
+.gl-searchBar{
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(244,185,196,.75);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 12px 14px;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+
+.gl-searchIcon{
+  width: 34px;
+  height: 34px;
+  display:grid;
+  place-items:center;
+  border-radius: 12px;
+  background: rgba(225,29,72,.06);
+  border: 1px solid rgba(244,185,196,.8);
+}
+
+.gl-searchInput{
+  border: 0;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  font-weight: 800;
+  font-size: 14px;
+  color: #111;
+}
+.gl-searchInput::placeholder{
+  color: rgba(17,24,39,.55);
+  font-weight: 700;
+}
+
+/* =========================
+   Main layout
+   ========================= */
+.gl-main{
+  max-width: var(--max);
+  margin: 12px auto 28px;
+  padding: 0 22px;
+  display:grid;
+  grid-template-columns: 300px 1fr 380px;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.gl-card{
+  background: var(--card);
+  border: 1px solid rgba(244,185,196,.8);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.gl-cardTitle{
+  padding: 18px 18px 10px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+/* =========================
+   FilterView
+   ========================= */
+.gl-filterCard {
+  padding-bottom: 14px;
+}
+
+.gl-filterGroup {
+  padding: 6px 18px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gl-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 800;
+  font-size: 14px;
+  color: #111;
+}
+.gl-check input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.gl-checkBox {
+  width: 18px; height: 18px;
+  border-radius: 5px;
+  border: 1px solid rgba(244, 185, 196, .9);
+  background: rgba(255, 255, 255, .95);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, .04);
+  position: relative;
+}
+.gl-check input:checked + .gl-checkBox {
+  background: var(--primary, #e11d48);
+  border-color: rgba(225, 29, 72, .9);
+}
+.gl-check input:checked + .gl-checkBox::after {
+  content: "";
+  position: absolute;
+  left: 5px; top: 3px;
+  width: 6px; height: 10px;
+  border: 2px solid #fff;
+  border-top: 0; border-left: 0;
+  transform: rotate(45deg);
+}
+
+.gl-divider {
+  height: 1px;
+  background: rgba(244, 185, 196, .65);
+  margin: 6px 18px 12px;
+}
+
+.gl-radioGroup {
+  padding: 0 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.gl-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 900;
+  font-size: 14px;
+  color: #111;
+}
+.gl-radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.gl-radioDot {
+  width: 18px; height: 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(244, 185, 196, .95);
+  background: rgba(255, 255, 255, .95);
+  position: relative;
+}
+.gl-radio input:checked + .gl-radioDot {
+  border-color: rgba(225, 29, 72, .85);
+}
+.gl-radio input:checked + .gl-radioDot::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 10px; height: 10px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: var(--primary, #e11d48);
+  box-shadow: 0 0 0 5px rgba(225, 29, 72, .12);
+}
+
+.gl-buttonGroup {
+  padding: 8px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.gl-buttonGroup:first-of-type .gl-btn {
+  width: 100%; height: 46px; border-radius: 22px; font-size: 15px;
+}
+.gl-buttonGroup .gl-btnPrimary {
+  width: 100%; height: 48px; border-radius: 18px; font-size: 15px;
+}
+.gl-buttonGroup .gl-btnOutline,
+.gl-buttonGroup .gl-btnGhost {
+  width: 100%; height: 44px; border-radius: 18px; font-size: 14px;
+}
+
+/* =========================
+   MapView
+   ========================= */
+.gl-mapCard{
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 560px;
+}
+
+.gl-mapPlaceholder{
+  height: 100%;
+  min-height: 560px;
+  border-radius: 16px;
+  background: radial-gradient(720px 520px at 45% 35%, rgba(225,29,72,.10), transparent 60%),
+              rgba(225,29,72,.06);
+  border: 1px solid rgba(244,185,196,.75);
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding: 18px;
+}
+
+.gl-mapPin{
+  width: 54px;
+  height: 54px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.gl-mapPinCircle{
+  position:absolute;
+  left: 50%;
+  top: 12px;
+  width: 28px; height: 28px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(225,29,72,.18);
+  border: 2px solid rgba(225,29,72,.55);
+}
+.gl-mapPinStem{
+  position:absolute;
+  left: 50%;
+  top: 26px;
+  width: 14px; height: 14px;
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 4px;
+  background: rgba(225,29,72,.18);
+  border: 2px solid rgba(225,29,72,.55);
+}
+
+.gl-mapTitle{
+  font-weight: 900;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.gl-mapSub{
+  margin-top: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(17,24,39,.55);
+}
+
+.gl-kakaoMap{
+  width: 100%;
+  height: 560px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gl-mapWrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gl-myLocationBtn{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  width: 160px;
+  height: 40px;
+  border-radius: 14px;
+  border: 1px solid rgba(244,185,196,.8);
+  background: rgba(255,255,255,.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: all .15s ease;
+}
+
+.gl-myLocationBtn:hover{
+  background: rgba(225,29,72,.08);
+  border-color: rgba(225,29,72,.6);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   ResultView
+   ========================= */
+.gl-resultCard{
+  display:flex;
+  flex-direction:column;
+  overflow: hidden;
+}
+
+.gl-resultHeader{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 18px 18px 10px;
+}
+
+.gl-resultTitle{
+  font-weight: 900;
+  font-size: 16px;
+}
+.gl-resultCount{
+  color: rgba(17,24,39,.55);
+  font-weight: 900;
+}
+
+.gl-sort{
+  border: 0;
+  background: transparent;
+  cursor:pointer;
+  font-weight: 900;
+  color: var(--primary);
+}
+.gl-sortText{ font-size: 13px; }
+
+.gl-resultList{
+  padding: 8px 14px 14px;
+  overflow: auto;
+  max-height: 640px;
+}
+
+.gl-resultList::-webkit-scrollbar{ width: 10px; }
+.gl-resultList::-webkit-scrollbar-thumb{
+  background: rgba(225,29,72,.20);
+  border-radius: 999px;
+  border: 3px solid rgba(255,255,255,.75);
+}
+.gl-resultList::-webkit-scrollbar-track{
+  background: rgba(255,255,255,.0);
+}
+
+.gl-resultItem{
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(244,185,196,.75);
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0,0,0,.05);
+  padding: 14px 14px 12px;
+  margin-bottom: 14px;
+}
+
+.gl-resultTop{
+  display:flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.gl-rank{
+  width: 26px;
+  height: 26px;
+  display:grid;
+  place-items:center;
+  border-radius: 10px;
+  background: rgba(225,29,72,.10);
+  border: 1px solid rgba(244,185,196,.85);
+  font-weight: 900;
+  color: rgba(17,24,39,.7);
+  flex: 0 0 auto;
+}
+
+.gl-resultMain{
+  flex: 1;
+  min-width: 0;
+}
+
+.gl-hName{
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+}
+.gl-hType{
+  margin-top: 6px;
+  font-weight: 800;
+  font-size: 12px;
+  color: rgba(17,24,39,.55);
+}
+
+.gl-hBadges{ margin-top: 8px; }
+
+.gl-badge{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+}
+.gl-badge.is-open{
+  background: rgba(225,29,72,.10);
+  border: 1px solid rgba(225,29,72,.35);
+  color: var(--primary);
+}
+.gl-badge.is-closed{
+  background: rgba(17,24,39,.06);
+  border: 1px solid rgba(17,24,39,.18);
+  color: rgba(17,24,39,.65);
+}
+
+.gl-hMeta{
+  margin-top: 10px;
+  display:flex;
+  flex-direction:column;
+  gap: 8px;
+}
+.gl-metaRow{
+  display:flex;
+  gap: 8px;
+  align-items:flex-start;
+  color: rgba(17,24,39,.70);
+  font-weight: 800;
+  font-size: 12px;
+}
+.gl-metaIco{ width: 18px; }
+.gl-metaText{
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gl-distance{
+  font-weight: 900;
+  font-size: 13px;
+  color: rgba(17,24,39,.55);
+  margin-left: 8px;
+  flex: 0 0 auto;
+}
+
+.gl-resultActions{
+  margin-top: 12px;
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gl-empty{
+  margin: 10px 4px 0;
+  padding: 18px 14px;
+  border-radius: 18px;
+  border: 1px dashed rgba(244,185,196,.9);
+  color: rgba(17,24,39,.65);
+  font-weight: 800;
+  background: rgba(255,255,255,.6);
+}
+
+/* =========================
+   Bookmark
+   ========================= */
+.gl-bmView{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+}
+
+.gl-bmBackdrop{
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(15,23,42,0.55);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.gl-bmCard{
+  position: relative;
+  z-index: 10000;
+  width: min(780px, 92vw);
+  height: min(650px, 84vh);
+  overflow: hidden;
+  background: rgba(255,255,255,.96);
+  border-radius: 18px;
+  box-shadow: 0 30px 90px rgba(15,23,42,0.35);
+  border: 1px solid rgba(244,185,196,.75);
+  display: flex;
+  flex-direction: column;
+}
+
+.gl-bmCardHead{
+  padding: 14px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(244,185,196,.55);
+  background: linear-gradient(180deg, rgba(225,29,72,.06), rgba(255,255,255,0));
+}
+
+.gl-bmCardTitle{
+  font-weight: 1000;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+}
+
+.gl-bmCloseBtn{
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid rgba(244,185,196,.75);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 900;
+}
+.gl-bmCloseBtn:hover{
+  background: rgba(225,29,72,.06);
+}
+
+.gl-bmCardBody{
+  padding: 14px;
+  overflow: auto;
+  display: grid;
+  gap: 14px;
+}
+
+.gl-bmEmpty{
+  color: rgba(17,24,39,.70);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  padding: 6px 2px;
+}
+
+.gl-bmList{
+  display: grid;
+  gap: 12px;
+}
+
+.gl-bmItem{
+  border: 1px solid rgba(244,185,196,.70);
+  border-radius: 16px;
+  padding: 12px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 12px 24px rgba(0,0,0,.04);
+}
+
+.gl-bmTop{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.gl-bmName{
+  font-weight: 1000;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+}
+
+.gl-bmDist{
+  font-weight: 1000;
+  font-size: 13px;
+  color: rgba(17,24,39,.60);
+}
+
+.gl-bmMeta{
+  margin-top: 8px;
+  color: rgba(17,24,39,.70);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.gl-bmMeta2{
+  margin-top: 6px;
+  color: rgba(17,24,39,.60);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.gl-bmActions{
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 1200px) {
+  .gl-header-inner {
+    padding: 12px 16px;
+  }
+  .gl-brand {
+    min-width: 180px;
+  }
+  .gl-logoMark {
+    width: 120px;
+    height: 50px;
+  }
+  .gl-navRow {
+    gap: 24px;
+  }
+  .gl-navItem {
+    font-size: 15px;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 1180px){
+  .gl-main{
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+      "left center"
+      "right right";
+  }
+  .gl-filterCard{ grid-area:left; }
+  .gl-mapCard{ grid-area:center; }
+  .gl-resultCard{ grid-area:right; }
+  .gl-resultList{ max-height: 420px; }
+}
+
+@media (max-width: 900px) {
+  .gl-nav {
+    display: none;
+  }
+  .gl-brand {
+    min-width: 150px;
+  }
+  .gl-logoMark {
+    width: 100px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 760px){
+  .gl-header-inner{
+    padding: 14px 14px;
+    gap: 12px;
+    position: relative;
+  }
+  .gl-nav{
+    position: static;
+    transform: none;
+    translate: 0 0;
+    flex: 1;
+  }
+  .gl-brand{ min-width: auto; }
+  .gl-navRow{ gap: 14px; }
+  .gl-actions{ min-width: auto; }
+  .gl-searchBarWrap{ padding: 0 14px 12px; }
+  .gl-main{
+    padding: 0 14px;
+    grid-template-columns: 1fr;
+  }
+  .gl-mapPlaceholder{ min-height: 420px; }
+  .gl-bmCard{
+    width: min(560px, 94vw);
+    height: min(680px, 86vh);
+  }
+  .gl-kakaoMap{
+    width: 100%;
+    height: 560px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .gl-header-inner {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  .gl-brand {
+    min-width: 120px;
+  }
+  .gl-logoMark {
+    width: 80px;
+    height: 40px;
+  }
+  .gl-actions {
+    min-width: auto;
+    gap: 6px;
+  }
+  .gl-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+    min-width: 70px;
+  }
+  .gl-userChip {
+    padding: 6px 8px;
+  }
+  .gl-userName {
+    display: none;
+  }
+  .gl-bookmarkBtn {
+    width: 40px;
+    height: 40px;
+  }
+  .gl-bookmarkBtn svg {
+    font-size: 24px;
+  }
+  .gl-searchBarWrap {
+    padding: 12px;
+  }
+  .gl-searchBar {
+    height: 50px;
+  }
+  .gl-mapPlaceholder {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .gl-logoMark {
+    width: 60px;
+    height: 35px;
+  }
+  .gl-actions .gl-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    min-width: 60px;
+  }
+  .gl-searchBar {
+    height: 46px;
+  }
+}
+
+@media print {
+  .gl-header,
+  .gl-filterView,
+  .gl-mobile-toggle,
+  .gl-result-close,
+  .gl-toggle-btn {
+    display: none !important;
+  }
+  .gl-result-view {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* 카카오맵 기본 스타일 제거 */
+.kakao-infowindow {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* 인포윈도우 카드 */
+.gl-infoCard {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 220px;
+  max-width: 300px;
+}
+
+.gl-infoTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.gl-infoRow {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.gl-infoBtn {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background:rgba(225,29,72);
+  color: white !important;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}

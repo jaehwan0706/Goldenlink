@@ -1,0 +1,266 @@
+/* --- InquiryPostDetailPage 스타일 --- */
+.gl-post-detail-container {
+  max-width: 900px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+.gl-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #e11d48; /* 목록으로 버튼 색상 */
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.gl-post-card {
+  background: #fff;
+  border: 1.5px solid rgba(244, 185, 196, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+/* 상단 핑크색 헤더 영역 */
+.gl-inquiry-header {
+  padding: 40px;
+  background-color: #fff9fa;
+  border-bottom: 1.5px solid rgba(244, 185, 196, 0.2);
+}
+
+.gl-status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.gl-status-badge.is-complete { background: #dcfce7; color: #166534; } /* 답변완료 */
+.gl-status-badge.is-waiting { background: #f3f4f6; color: #4b5563; } /* 답변대기 */
+
+.gl-post-title { font-size: 26px; font-weight: 900; margin-bottom: 15px; color: #111; }
+
+.gl-post-meta { display: flex; gap: 20px; color: #9ca3af; font-size: 14px; font-weight: 700; }
+.gl-meta-item { display: flex; align-items: center; gap: 6px; }
+
+/* 본문 영역 */
+.gl-post-content { padding: 40px; }
+.gl-content-label { font-weight: 900; font-size: 16px; margin-bottom: 15px; color: #333; }
+.gl-content-text { font-size: 16px; line-height: 1.7; color: #4b5563; font-weight: 600; white-space: pre-wrap; }
+
+/* ✅ 관리자 답변(댓글) 섹션 */
+.gl-admin-section { 
+  padding: 0 40px 40px; 
+  border-top: 1px solid #eee;
+  background-color: #fafafa;
+}
+
+/* ✅ 댓글 헤더 */
+.gl-comment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+.gl-comment-header svg {
+  font-size: 20px;
+  color: #22c55e;
+}
+
+.gl-comment-header h3 {
+  font-size: 18px;
+  font-weight: 900;
+  color: #111;
+  margin: 0;
+}
+
+.gl-comment-header h3 span {
+  color: #22c55e;
+  margin-left: 5px;
+}
+
+/* ✅ 댓글 입력란 */
+.gl-comment-input-wrap {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.gl-comment-input-wrap textarea {
+  flex: 1;
+  height: 100px;
+  padding: 15px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  resize: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  transition: border 0.2s;
+}
+
+.gl-comment-input-wrap textarea:focus {
+  border-color: #22c55e;
+}
+
+.gl-comment-submit-btn {
+  width: 100px;
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.gl-comment-submit-btn:hover {
+  background: #16a34a;
+}
+
+/* ✅ 댓글 리스트 */
+.gl-comment-list {
+  margin-top: 20px;
+}
+
+.gl-comment-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.gl-comment-item:last-child {
+  border-bottom: none;
+}
+
+/* ✅ 관리자 답변 스타일 */
+.gl-comment-item.gl-admin-reply {
+  background: #f0fdf4;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1.5px solid #dcfce7;
+  margin-bottom: 15px;
+}
+
+.gl-comment-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.gl-comment-author {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 900;
+  font-size: 14px;
+  color: #166534;
+}
+
+.gl-admin-icon {
+  color: #22c55e;
+  font-size: 16px;
+}
+
+.gl-comment-date {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.gl-comment-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 600;
+  white-space: pre-wrap;
+}
+
+/* ✅ 댓글 없음 메시지 */
+.gl-no-comments {
+  text-align: center;
+  padding: 40px 20px;
+  color: #9ca3af;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ✅ 로그인 필요 알림 */
+.gl-login-required-box {
+  background: #f9fafb; 
+  padding: 100px; 
+  border-radius: 20px; 
+  text-align: center;
+  font-weight: 800; 
+  color: #6b7280; 
+  border: 1.5px dashed #eee;
+}
+
+/* ✅ 대기 중 메시지 */
+.gl-waiting-msg {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 14px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1.5px dashed #e5e7eb;
+}
+
+/* ✅ 수정/삭제 버튼 스타일 추가 (InquiryPostDetailPage.css에 추가) */
+
+.gl-inquiry-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.gl-post-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.gl-edit-btn,
+.gl-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gl-edit-btn {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.gl-edit-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.gl-delete-btn {
+  background: #ef4444;
+  color: #fff;
+}
+
+.gl-delete-btn:hover {
+  background: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}

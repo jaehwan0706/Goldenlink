@@ -1,0 +1,160 @@
+/* --- AEDVideoPage 정밀 디자인 --- */
+
+.gl-video-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+}
+
+/* 헤더 영역 */
+.gl-video-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.gl-video-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.gl-video-main-icon {
+  font-size: 36px;
+  color: #e11d48;
+}
+
+.gl-video-header h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #111;
+}
+
+.gl-video-header p {
+  font-size: 18px;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+/* 비디오 섹션 카드 */
+.gl-video-container-card {
+  background: #fff;
+  border: 1px solid rgba(244, 185, 196, 0.4);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  margin-bottom: 50px;
+}
+
+.gl-video-card-head {
+  background-color: #e11d48;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+}
+
+.gl-play-icon { font-size: 20px; }
+.gl-video-card-head h2 { font-size: 20px; font-weight: 900; margin: 0; }
+
+.gl-video-frame-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 비율 유지 */
+  height: 0;
+  background: #000;
+}
+
+.gl-video-frame-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+/* 정보 그리드 영역 */
+.gl-video-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.gl-info-card {
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.gl-info-card.is-white {
+  background: #fff;
+  border: 1px solid #f3f4f6;
+}
+
+.gl-info-card.is-pink {
+  background: #e11d48;
+  color: #fff;
+}
+
+.gl-info-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.gl-card-icon { font-size: 28px; }
+.gl-info-card-head h3 { font-size: 22px; font-weight: 900; margin: 0; }
+
+/* 리스트 스타일 */
+.gl-point-list { list-style: none; padding: 0; }
+.gl-point-list li { margin-bottom: 20px; }
+.gl-point-list strong { display: block; font-size: 17px; color: #e11d48; margin-bottom: 5px; font-weight: 900; }
+.gl-point-list p { font-size: 15px; color: #4b5563; font-weight: 700; line-height: 1.5; }
+
+/* CPR 콤보 박스 */
+.gl-cpr-combo-content p { font-size: 16px; font-weight: 700; margin-bottom: 20px; opacity: 0.95; }
+
+.gl-sequence-box {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.gl-sequence-box h4 { margin-bottom: 15px; font-size: 18px; color: #ffeb3b; }
+.gl-sequence-box ol { padding-left: 20px; }
+.gl-sequence-box li { font-size: 15px; margin-bottom: 8px; font-weight: 700; }
+
+.gl-combo-footer { font-size: 14px !important; opacity: 0.8 !important; }
+
+/* 하단 블루 팁 박스 */
+.gl-bottom-tips-box {
+  background-color: #eff6ff;
+  border-radius: 25px;
+  padding: 40px;
+  border: 1px solid #dbeafe;
+}
+
+.gl-tips-main-title {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 20px; font-weight: 900; color: #1e40af;
+  margin-bottom: 30px;
+}
+
+.gl-tips-flex {
+  display: flex;
+  gap: 50px;
+}
+
+.gl-tip-item { flex: 1; }
+.gl-tip-head {
+  display: flex; align-items: center; gap: 10px;
+  color: #1e40af; font-size: 17px; font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.gl-tip-item p {
+  font-size: 14.5px; color: #3b82f6;
+  font-weight: 700; line-height: 1.6;
+}
