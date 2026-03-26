@@ -1,0 +1,107 @@
+/* --- IntroducePage 전용 스타일 --- */
+.gl-intro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 히어로 섹션 */
+.gl-intro-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.gl-intro-main-logo {
+  width: 180px;
+  margin-bottom: 25px;
+}
+
+.gl-intro-main-title {
+  font-size: 30px;
+  font-weight: 900;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.gl-intro-main-sub {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+/* 메인 카드 디자인 */
+.gl-intro-main-card {
+  background: #ffffff;
+  border: 1px solid rgba(244, 185, 196, 0.4);
+  border-radius: 35px;
+  padding: 80px 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.02);
+}
+
+.gl-intro-card-head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gl-intro-card-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.gl-intro-card-sub {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+/* 기능 그리드 레이아웃 */
+.gl-intro-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.gl-intro-feature-item {
+  padding: 45px 25px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.gl-intro-feature-item:hover {
+  transform: translateY(-8px);
+}
+
+.gl-intro-icon-circle {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 25px;
+  background-color: var(--primary); /* 메인 브랜드 컬러 */
+  color: #fff;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.gl-intro-feature-name {
+  font-size: 19px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.gl-intro-feature-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #6b7280;
+  font-weight: 700;
+}

@@ -1,0 +1,159 @@
+/* --- AEDGuidePage 정밀 디자인 --- */
+
+.gl-aed-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+  background-color: #fdfdfd;
+}
+
+/* 헤더 영역 */
+.gl-aed-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.gl-aed-logo-icon {
+  width: 60px; height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 10px rgba(225, 29, 72, 0.1);
+  color: #e11d48;
+  font-size: 30px;
+}
+
+.gl-aed-header h1 { font-size: 34px; font-weight: 900; margin-bottom: 12px; color: #111; }
+.gl-aed-header p { font-size: 17px; color: #6b7280; font-weight: 700; margin-bottom: 35px; }
+
+/* 119 레드 배너 */
+.gl-aed-red-banner {
+  background-color: #e11d48;
+  border-radius: 20px;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gl-banner-left { display: flex; align-items: center; gap: 20px; }
+.gl-banner-icon { font-size: 35px; }
+.gl-banner-label { display: block; font-size: 15px; font-weight: 700; opacity: 0.9; text-align: left; }
+.gl-banner-number { font-size: 38px; font-weight: 900; }
+.gl-banner-warn { font-size: 40px; opacity: 0.2; }
+
+/* 소개 카드 */
+.gl-aed-intro-card {
+  background: #fff;
+  border: 1px solid rgba(244, 185, 196, 0.4);
+  border-radius: 25px;
+  padding: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.gl-intro-title { font-size: 22px; font-weight: 900; margin-bottom: 15px; border-left: 5px solid #e11d48; padding-left: 15px; }
+.gl-intro-text { font-size: 16px; color: #4b5563; line-height: 1.7; font-weight: 600; margin-bottom: 25px; }
+
+.gl-golden-time-box {
+  background: #fff1f2;
+  border-radius: 15px;
+  padding: 20px 25px;
+  display: flex; align-items: center; gap: 20px;
+  border-left: 5px solid #e11d48;
+}
+
+.gl-golden-icon { font-size: 30px; color: #e11d48; }
+.gl-golden-time-box strong { font-size: 18px; color: #e11d48; display: block; margin-bottom: 5px; }
+.gl-golden-time-box p { font-size: 14.5px; color: #333; font-weight: 700; line-height: 1.5; }
+
+/* 단계별 카드 그리드 */
+.gl-step-main-title { text-align: center; font-size: 26px; font-weight: 900; margin-bottom: 40px; }
+
+.gl-aed-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.gl-step-card {
+  background: #fff;
+  border: 1px solid #f3f4f6;
+  border-radius: 25px;
+  padding: 35px;
+  display: flex; flex-direction: column;
+}
+
+.gl-step-head { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+.gl-step-idx {
+  background: #e11d48; color: #fff; width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-weight: 900; flex-shrink: 0;
+}
+.gl-step-head h3 { font-size: 19px; font-weight: 900; color: #111; line-height: 1.4; }
+
+.gl-step-illustration {
+  background: #fff9fa;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+  flex: 1;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+
+.gl-step-checklist { list-style: none; padding: 0; margin: 0; }
+.gl-step-checklist li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 14.5px; color: #4b5563; font-weight: 700; margin-bottom: 12px; line-height: 1.5;
+}
+.gl-step-checklist svg { color: #10b981; font-size: 18px; margin-top: 2px; }
+
+/* 개별 일러스트 스타일 */
+.gl-shock-btn-illus {
+  width: 100px; height: 100px;
+  background: #e11d48;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 900; font-size: 18px; text-align: center;
+  box-shadow: 0 0 20px rgba(225, 29, 72, 0.4);
+}
+
+/* ⭐ 흐려졌다가 선명해지는 애니메이션 효과 */
+.gl-blur-animation {
+  animation: blurToClear 2s infinite alternate ease-in-out;
+}
+
+@keyframes blurToClear {
+  0% { filter: blur(8px); opacity: 0.6; transform: scale(0.95); }
+  100% { filter: blur(0); opacity: 1; transform: scale(1); }
+}
+
+.gl-shock-warning { color: #e11d48; font-weight: 900; margin-top: 15px; font-size: 14px; }
+
+/* 주의사항 영역 */
+.gl-aed-precautions {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 60px;
+}
+.gl-pre-box { padding: 30px; border-radius: 20px; }
+.gl-pre-box.is-wrong { background: #fffbeb; border: 1.5px solid #fde68a; }
+.gl-pre-box.is-must { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
+
+.gl-pre-box h4 { font-size: 18px; font-weight: 900; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+.gl-pre-box.is-wrong h4 { color: #92400e; }
+.gl-pre-box.is-must h4 { color: #166534; }
+
+.gl-pre-box ul { padding-left: 20px; }
+.gl-pre-box li { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 10px; line-height: 1.5; }
+
+/* 최종 푸터 배너 */
+.gl-aed-final-banner {
+  background: #e11d48; border-radius: 30px; padding: 60px 40px; text-align: center; color: #fff;
+}
+.gl-final-icon { font-size: 50px; margin-bottom: 20px; opacity: 0.9; }
+.gl-aed-final-banner h2 { font-size: 30px; font-weight: 900; margin-bottom: 15px; }
+.gl-aed-final-banner p { font-size: 17px; line-height: 1.6; font-weight: 700; opacity: 0.9; }

@@ -1,0 +1,295 @@
+/* ========================================
+   ResultView.css - 병원 추천 결과 사이드바
+   ======================================== */
+
+.gl-result-view {
+  position: relative;
+  width: 420px;
+  height: 100%;
+  background: white;
+  border-left: 2px solid #FFD1DC;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 닫기 버튼 */
+.gl-result-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f3f4f6;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  color: #6b7280;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.gl-result-close:hover {
+  background: #e5e7eb;
+  color: #111;
+  transform: scale(1.1);
+}
+
+/* 헤더 */
+.gl-result-header {
+  padding: 20px 24px;
+  border-bottom: 2px solid #FFD1DC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff5f7;
+}
+
+.gl-result-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1f2937;
+}
+
+.gl-result-count {
+  color: #e11d48;
+  font-weight: 700;
+}
+
+.gl-result-sort {
+  padding: 8px 16px;
+  background: white;
+  border: 2px solid #FFD1DC;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #e11d48;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gl-result-sort:hover {
+  background: #fff5f7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.15);
+}
+
+/* 병원 목록 */
+.gl-result-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.gl-result-empty {
+  padding: 60px 20px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 병원 카드 */
+.gl-hospital-card {
+  background: white;
+  border: 2px solid #FFD1DC;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.2s;
+}
+
+.gl-hospital-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.15);
+  border-color: #e11d48;
+}
+
+.gl-hospital-card:last-child {
+  margin-bottom: 0;
+}
+
+/* 병원 상단: 순위 + 이름 */
+.gl-hospital-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.gl-hospital-rank {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+}
+
+.gl-hospital-name-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.gl-hospital-name {
+  font-size: 18px;
+  font-weight: 900;
+  color: #1f2937;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.gl-hospital-category {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e11d48;
+}
+
+/* 배지 */
+.gl-hospital-badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.gl-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.gl-badge.outline {
+  background: white;
+  border: 2px solid #dcfce7;
+  color: #166534;
+}
+
+/* 정보 박스 */
+.gl-hospital-info {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.gl-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.gl-info-row:last-child {
+  margin-bottom: 0;
+}
+
+.gl-info-row .icon {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.gl-info-row .text {
+  flex: 1;
+  color: #374151;
+  word-break: break-all;
+}
+
+.gl-info-row.address .text {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* 액션 버튼 */
+.gl-hospital-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.gl-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  white-space: nowrap;
+}
+
+.gl-btn-outline {
+  background: white;
+  color: #e11d48;
+  border: 2px solid #FFD1DC;
+}
+
+.gl-btn-outline:hover {
+  background: #fff5f7;
+  border-color: #e11d48;
+  transform: translateY(-2px);
+}
+
+.gl-btn-primary {
+  background: #e11d48;
+  color: white;
+}
+
+.gl-btn-primary:hover {
+  background: #be123c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+}
+
+.gl-btn-bookmark {
+  background: white;
+  color: #e11d48;
+  border: 2px solid #FFD1DC;
+}
+
+.gl-btn-bookmark:hover {
+  background: #fff5f7;
+  border-color: #e11d48;
+  transform: translateY(-2px);
+}
+
+.gl-btn-bookmark.is-saved {
+  background: #fee2e2;
+  border-color: #e11d48;
+  color: #e11d48;
+}
+
+.gl-btn-bookmark.is-saved:hover {
+  background: #fecaca;
+}
+
+/* 스크롤바 스타일 */
+.gl-result-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.gl-result-list::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.gl-result-list::-webkit-scrollbar-thumb {
+  background: #FFD1DC;
+  border-radius: 4px;
+}
+
+.gl-result-list::-webkit-scrollbar-thumb:hover {
+  background: #e11d48;
+}

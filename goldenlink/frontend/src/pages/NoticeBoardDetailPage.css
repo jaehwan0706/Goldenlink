@@ -1,0 +1,70 @@
+.gl-notice-detail-container { max-width: 1000px; margin: 40px auto 80px; padding: 0 20px; }
+
+.gl-back-btn {
+  display: flex; align-items: center; gap: 5px; background: none; border: none;
+  color: #e11d48; font-weight: 800; cursor: pointer; margin-bottom: 20px;
+}
+
+.gl-notice-card { background: #fff; border: 1px solid #eee; border-radius: 20px; overflow: hidden; }
+
+.gl-notice-header { padding: 40px; background: #fff9fa; border-bottom: 1px solid #fceef0; }
+
+.gl-badge-notice {
+  background: #e11d48; color: #fff; padding: 3px 10px; border-radius: 4px;
+  font-size: 12px; font-weight: 900; margin-bottom: 15px; display: inline-block;
+}
+
+.gl-notice-title { font-size: 28px; font-weight: 900; margin-bottom: 20px; color: #111; }
+
+.gl-notice-meta { display: flex; gap: 20px; color: #94a3b8; font-size: 14px; font-weight: 700; }
+.gl-meta-item { display: flex; align-items: center; gap: 6px; }
+
+.gl-notice-content { padding: 50px 40px; line-height: 1.8; font-size: 17px; color: #334155; font-weight: 500; }
+
+/* ✅ 수정/삭제 버튼 스타일 추가 (NoticeBoardDetailPage.css에 추가) */
+
+.gl-notice-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.gl-post-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.gl-edit-btn,
+.gl-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gl-edit-btn {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.gl-edit-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.gl-delete-btn {
+  background: #ef4444;
+  color: #fff;
+}
+
+.gl-delete-btn:hover {
+  background: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}

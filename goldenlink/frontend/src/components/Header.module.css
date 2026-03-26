@@ -1,0 +1,26 @@
+/* Header.module.css - Header 컴포넌트 전용 스타일 */
+
+.headerButton {
+  width: auto !important;
+  min-width: 90px !important;
+  padding: 10px 20px !important;
+  white-space: nowrap !important;
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+  .headerButton {
+    min-width: 70px !important;
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* 매우 작은 화면 */
+@media (max-width: 400px) {
+  .headerButton {
+    min-width: 60px !important;
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+  }
+}
