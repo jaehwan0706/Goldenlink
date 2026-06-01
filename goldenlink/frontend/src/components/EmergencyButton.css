@@ -1,0 +1,555 @@
+/* =========================================================
+   EmergencyButton.css - 응급 알림 버튼
+   ========================================================= */
+
+/* =========================
+   응급 버튼 (하단 좌측)
+   ========================= */
+.em-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 1000;
+  
+  width: 80px;
+  height: 80px;
+  
+  background: #dc2626;
+  border: none;
+  border-radius: 50%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.4);
+  
+  transition: transform 0.2s ease;
+}
+
+.em-btn:hover {
+  transform: scale(1.05);
+}
+
+.em-btn:active {
+  transform: scale(0.95);
+}
+
+/* 펄스 애니메이션 (퍼지는 원) */
+.em-pulse,
+.em-pulse-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.4);
+  animation: pulse 2s ease-out infinite;
+  pointer-events: none;
+}
+
+.em-pulse-2 {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* 경고 아이콘 */
+.em-icon {
+  position: relative;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+}
+
+.em-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* 텍스트 */
+.em-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+
+/* =========================
+   모달 배경
+   ========================= */
+.em-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================
+   모달
+   ========================= */
+.em-modal {
+  width: min(420px, 100%);
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 헤더 */
+.em-modal-header {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.em-header-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.em-header-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.em-header-text {
+  color: white;
+}
+
+.em-header-title {
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.em-header-subtitle {
+  font-weight: 700;
+  font-size: 13px;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+/* 바디 */
+.em-modal-body {
+  padding: 24px 20px 20px;
+}
+
+.em-question {
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: center;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+}
+
+.em-guide {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+}
+
+/* 카운트다운 박스 */
+.em-countdown-box {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border: 2px solid #fecaca;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.em-countdown-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #dc2626;
+  box-shadow: 0 0 0 8px rgba(220, 38, 38, 0.1);
+  
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  
+  animation: countdownPulse 1s ease-in-out infinite;
+}
+
+@keyframes countdownPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.em-countdown-number {
+  font-weight: 900;
+  font-size: 36px;
+  color: white;
+}
+
+.em-countdown-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #dc2626;
+}
+
+.em-countdown-subtext {
+  font-weight: 600;
+  font-size: 12px;
+  color: #991b1b;
+}
+
+/* 전송될 정보 */
+.em-info-box {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.em-info-title {
+  font-weight: 800;
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.em-info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.em-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.em-info-icon {
+  width: 18px;
+  height: 18px;
+  color: #9ca3af;
+}
+
+/* 소리 버튼 */
+.em-sound-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  cursor: pointer;
+  
+  transition: all 0.2s ease;
+}
+
+.em-sound-btn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.em-sound-btn svg {
+  width: 22px;
+  height: 22px;
+  color: #6b7280;
+}
+
+/* 액션 버튼 */
+.em-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.em-cancel-btn,
+.em-send-btn {
+  flex: 1;
+  height: 48px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.em-cancel-btn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+}
+
+.em-cancel-btn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.em-send-btn {
+  background: #dc2626;
+  border: none;
+  color: white;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.em-send-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.4);
+}
+
+.em-send-btn:active {
+  transform: translateY(0);
+}
+
+/* 경고 */
+.em-warning {
+  text-align: center;
+  font-weight: 600;
+  font-size: 11px;
+  color: #dc2626;
+  background: #fef2f2;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* =========================
+   성공 알림
+   ========================= */
+.em-success-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  
+  animation: fadeIn 0.2s ease;
+}
+
+.em-success-alert {
+  width: min(520px, 100%);
+  background: #1f2937;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  
+  animation: slideUp 0.3s ease;
+}
+
+.em-success-icon {
+  width: 64px;
+  height: 64px;
+  background: #22c55e;
+  border-radius: 50%;
+  
+  display: grid;
+  place-items: center;
+  margin: 0 auto 16px;
+  
+  animation: successPop 0.5s ease;
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.em-success-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.em-success-title {
+  font-weight: 900;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* 시뮬레이션 경고 */
+.em-success-note {
+  text-align: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.em-success-note strong {
+  color: #fbbf24;
+}
+
+.em-success-body {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.em-success-item {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin-bottom: 10px;
+}
+
+.em-success-item:last-child {
+  margin-bottom: 0;
+}
+
+.em-success-item strong {
+  color: white;
+}
+
+/* ✅ 병원 주소 표시 (들여쓰기) */
+.em-success-subitem {
+  font-size: 13px;
+  color: #9ca3af;
+  padding-left: 24px;
+  margin-top: -6px;
+}
+
+.em-success-confirm {
+  width: 100%;
+  height: 48px;
+  background: #a78bfa;
+  border: none;
+  border-radius: 12px;
+  
+  font-weight: 800;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  
+  transition: all 0.2s ease;
+}
+
+.em-success-confirm:hover {
+  background: #8b5cf6;
+  transform: translateY(-1px);
+}
+
+.em-success-confirm:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   반응형
+   ========================= */
+@media (max-width: 600px) {
+  .em-btn {
+    width: 70px;
+    height: 70px;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .em-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .em-text {
+    font-size: 12px;
+  }
+  
+  .em-modal {
+    width: 100%;
+  }
+  
+  .em-modal-body {
+    padding: 20px 16px 16px;
+  }
+  
+  .em-countdown-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .em-success-alert {
+    padding: 24px 20px;
+  }
+}

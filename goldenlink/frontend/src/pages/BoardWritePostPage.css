@@ -1,0 +1,95 @@
+/* --- BoardWritePostPage 전용 스타일 --- */
+.gl-write-container {
+  max-width: 900px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+.gl-write-card {
+  background: #fff;
+  border: 1.5px solid rgba(244, 185, 196, 0.4); /* 시안의 연한 핑크 테두리 */
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.gl-write-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #f9f9f9;
+  padding-bottom: 15px;
+}
+
+.gl-write-header h2 { font-size: 24px; font-weight: 900; color: #111; }
+
+.gl-close-btn {
+  background: none; border: none; font-size: 28px; color: #999; cursor: pointer;
+  transition: color 0.2s;
+}
+.gl-close-btn:hover { color: #e11d48; }
+
+.gl-input-group { margin-bottom: 25px; }
+.gl-input-group label {
+  display: block; font-weight: 800; font-size: 15px; margin-bottom: 12px; color: #333;
+}
+
+/* 입력창 스타일 */
+.gl-write-body input, .gl-write-body textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  background: #fcfcfc;
+  transition: border-color 0.2s;
+}
+
+.gl-write-body input:focus { border-color: #f4b9c4; }
+
+/* 작성자 읽기 전용 스타일 */
+.gl-input-read { color: #aaa; cursor: not-allowed; background: #f7f7f7 !important; }
+
+/* 내용 입력란 */
+.gl-write-body textarea { 
+  height: 300px; 
+  resize: none; 
+  background: #fff; 
+  border: 1.5px solid rgba(244, 185, 196, 0.3); 
+}
+
+/* 사진 첨부 점선 영역 */
+.gl-file-upload-zone {
+  border: 1.5px dashed rgba(244, 185, 196, 0.6);
+  border-radius: 15px;
+  padding: 50px 20px;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.2s;
+}
+.gl-file-upload-zone:hover { background: #fff9fa; border-color: #e11d48; }
+
+.gl-upload-icon { font-size: 45px; color: #cbd5e1; margin-bottom: 15px; }
+.gl-file-upload-zone p { font-size: 15px; font-weight: 800; color: #64748b; margin-bottom: 6px; }
+.gl-file-upload-zone span { font-size: 13px; color: #94a3b8; font-weight: 600; }
+
+/* 하단 버튼부 */
+.gl-write-footer {
+  display: flex; justify-content: flex-end; gap: 12px; margin-top: 30px;
+  padding-top: 20px; border-top: 1px solid #f9f9f9;
+}
+
+.gl-btn-cancel {
+  background: #f1f5f9; color: #64748b; padding: 13px 28px; border-radius: 12px; 
+  border: none; font-weight: 800; cursor: pointer;
+}
+
+.gl-btn-submit {
+  background: #e11d48; color: #fff; padding: 13px 35px; border-radius: 12px; 
+  border: none; font-weight: 900; cursor: pointer;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2);
+}

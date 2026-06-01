@@ -1,0 +1,97 @@
+/* --- InquiryBoardWritePostPage 레이아웃 --- */
+.gl-inquiry-write-container {
+  max-width: 900px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+.gl-inquiry-write-header h1 {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+.gl-inquiry-write-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.gl-write-field { margin-bottom: 25px; }
+.gl-write-field label {
+  display: block;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* 입력창 공통 스타일 */
+.gl-inquiry-write-card input[type="text"], 
+.gl-inquiry-write-card textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #fcfcfc;
+  outline: none;
+}
+
+.gl-read-only-input { color: #999; background: #f8f8f8 !important; }
+
+.gl-inquiry-write-card textarea {
+  height: 250px;
+  resize: none;
+  border: 1.5px solid rgba(225, 29, 72, 0.1); /* 레드 포인트 보더 */
+}
+
+/* 파일 업로드 영역 */
+.gl-file-upload-zone {
+  border: 1.5px dashed #eee;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.gl-upload-icon { font-size: 35px; color: #cbd5e1; margin-bottom: 8px; }
+
+/* 비밀글 설정 및 하단 요소 */
+.gl-private-option { margin: 20px 0; }
+.gl-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+}
+.gl-lock-icon { color: #666; font-size: 18px; }
+
+.gl-inquiry-info-box {
+  background-color: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-size: 13.5px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.gl-write-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 30px; }
+.gl-btn-cancel { background: #f1f5f9; color: #64748b; padding: 12px 25px; border-radius: 10px; border: none; font-weight: 800; cursor: pointer; }
+
+/* 작성하기 버튼 (레드) */
+.gl-btn-submit {
+  background: #e11d48;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 900;
+  cursor: pointer;
+}
