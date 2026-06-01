@@ -1,0 +1,23 @@
+# 환경변수 (절대 올리면 안됨)
+.env
+.env.local
+.env.*.local
+
+# 의존성
+node_modules/
+
+# Terraform 상태 및 민감 파일
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/tfplan
+terraform/*.tfvars
+
+# 로그
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db

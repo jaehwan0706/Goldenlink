@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\dlstj\\\\Desktop\\\\5min\" -ErrorAction SilentlyContinue; if \\(-not \\(Test-Path \"c:\\\\Users\\\\dlstj\\\\Desktop\\\\5min\"\\)\\) { Write-Output \"Directory does not exist\" })",
+      "Bash(aws --version)",
+      "Bash(terraform --version)",
+      "PowerShell(winget install HashiCorp.Terraform)",
+      "Bash(aws sts *)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git add *)"
+    ]
+  }
+}
